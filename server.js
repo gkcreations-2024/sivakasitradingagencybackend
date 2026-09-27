@@ -68,8 +68,8 @@ app.post("/place-order", async (req, res) => {
 
     const sequenceNumber = counter.seq;
 
-    // 🔥 Format: SPP-001
-    const billNo = "SPP-" + String(sequenceNumber).padStart(3, "0");
+    // 🔥 Format: STA-001
+    const billNo = "STA-" + String(sequenceNumber).padStart(3, "0");
 
     console.log("✅ Generated BillNo:", billNo);
 
@@ -102,7 +102,7 @@ app.post('/send-email', upload.single('pdf'), async (req, res) => {
 
     try {
         const data = await resend.emails.send({
-            from: 'Sivakasi Trading Agency <orders@sivakasitradingagency.com>',  // later own domain verify panna maathunga
+            from: 'Sivakasi Trading Agency <orders@sivakasitradingagency.in>',  // later own domain verify panna maathunga
             to: customerEmail,
             bcc: 'sivakasitradingagency2026@gmail.com',
             subject: 'Order Confirmation',

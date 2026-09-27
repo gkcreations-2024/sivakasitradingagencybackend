@@ -102,9 +102,9 @@ app.post('/send-email', upload.single('pdf'), async (req, res) => {
 
     try {
         const data = await resend.emails.send({
-            from: 'Sivakasi Trading Agency <orders@sivaspyroparadise.com>',  // later own domain verify panna maathunga
+            from: 'Sivakasi Trading Agency <orders@sivakasitradingagency.com>',  // later own domain verify panna maathunga
             to: customerEmail,
-            bcc: 'sivakasitradingagency@gmail.com',
+            bcc: 'sivakasitradingagency2026@gmail.com',
             subject: 'Order Confirmation',
             text: 'Please find the attached invoice.',
             attachments: [
